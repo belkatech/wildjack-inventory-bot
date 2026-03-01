@@ -15,7 +15,7 @@ def get_sheet_data():
     creds = Credentials.from_service_account_info(creds_json, scopes=scope)
     client = gspread.authorize(creds)
     sheet = client.open_by_key(os.environ["SPREADSHEET_ID"]).worksheet("Dashboard")
-    rows = sheet.get_all_records()
+    rows = sheet.get_all_records(expected_headers=['SKU', 'Item Name', 'Category', 'Quantity', 'Unit', 'Class'])
     return rows
 
 # Format inventory data as text for Claude
