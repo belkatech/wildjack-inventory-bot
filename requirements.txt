@@ -1,0 +1,6 @@
+flask
+twilio
+anthropic
+gspread
+google-auth
+gunicorn
