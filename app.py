@@ -39,7 +39,14 @@ Here is the current inventory data:
 
 {inventory_text}
 
-Answer this question concisely and clearly: {question}"""
+Answer this question in simple, conversational language. Important rules:
+- Never use tables or markdown formatting
+- Never mention SKU codes
+- Keep answers short and to the point
+- Use plain text only, no bullet symbols or special characters
+- Respond in the same language the question was asked in
+
+Question: {question}"""
             }
         ]
     )
